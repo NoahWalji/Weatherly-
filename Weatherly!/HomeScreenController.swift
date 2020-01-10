@@ -102,14 +102,6 @@ class HomeScreenController: UIViewController, CLLocationManagerDelegate{
         locationManager.startUpdatingLocation()
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
-    {
-        if segue.destination is AdditionalInfoController
-        {
-            let vc = segue.destination as? AdditionalInfoController
-            vc?.weatherJSON = self.weatherJSON
-        }
-    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations[locations.count - 1]
@@ -192,7 +184,7 @@ class HomeScreenController: UIViewController, CLLocationManagerDelegate{
     func updateWeatherDataDaily(json: JSON)
     {
         let cHigh = json["data"][0]["max_temp"].int
-        let cLow = json["data"][0]["app_min_temp"].int
+        let cLow = json["data"][0]["min_temp"].int
         let tempday1data = json["data"][1]["max_temp"].int
         let tempday2data = json["data"][2]["max_temp"].int
         let tempday3data = json["data"][3]["max_temp"].int
@@ -201,13 +193,13 @@ class HomeScreenController: UIViewController, CLLocationManagerDelegate{
         let tempday6data = json["data"][6]["max_temp"].int
         let tempday7data = json["data"][7]["max_temp"].int
         
-        let lowday1data = json["data"][1]["app_min_temp"].int
-        let lowday2data = json["data"][2]["app_min_temp"].int
-        let lowday3data = json["data"][3]["app_min_temp"].int
-        let lowday4data = json["data"][4]["app_min_temp"].int
-        let lowday5data = json["data"][5]["app_min_temp"].int
-        let lowday6data = json["data"][6]["app_min_temp"].int
-        let lowday7data = json["data"][7]["app_min_temp"].int
+        let lowday1data = json["data"][1]["min_temp"].int
+        let lowday2data = json["data"][2]["min_temp"].int
+        let lowday3data = json["data"][3]["min_temp"].int
+        let lowday4data = json["data"][4]["min_temp"].int
+        let lowday5data = json["data"][5]["min_temp"].int
+        let lowday6data = json["data"][6]["min_temp"].int
+        let lowday7data = json["data"][7]["min_temp"].int
         
         tempday1 = tempday1data!
         tempday2 = tempday2data!

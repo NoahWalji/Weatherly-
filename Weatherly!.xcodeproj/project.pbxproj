@@ -14,7 +14,6 @@
 		4FDFCD21235817850029CFF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFCD1F235817850029CFF4 /* Main.storyboard */; };
 		4FDFCD23235817870029CFF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFCD22235817870029CFF4 /* Assets.xcassets */; };
 		4FDFCD26235817870029CFF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4FDFCD24235817870029CFF4 /* LaunchScreen.storyboard */; };
-		4FE0A7B823613AB400DDE58D /* AdditionalInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4FE0A7B723613AB400DDE58D /* AdditionalInfoController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,7 +25,6 @@
 		4FDFCD22235817870029CFF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4FDFCD25235817870029CFF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4FDFCD27235817870029CFF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4FE0A7B723613AB400DDE58D /* AdditionalInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionalInfoController.swift; sourceTree = "<group>"; };
 		D123671BC713CBED6BED676F /* Pods-Weatherly!.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weatherly!.debug.xcconfig"; path = "Target Support Files/Pods-Weatherly!/Pods-Weatherly!.debug.xcconfig"; sourceTree = "<group>"; };
 		D25F71FF346773F7D14234D0 /* Pods_Weatherly_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Weatherly_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4C8612DB11B284B871B4EF7 /* Pods-Weatherly!.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Weatherly!.release.xcconfig"; path = "Target Support Files/Pods-Weatherly!/Pods-Weatherly!.release.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +75,6 @@
 				4FDFCD19235817850029CFF4 /* AppDelegate.swift */,
 				4FDFCD1B235817850029CFF4 /* SceneDelegate.swift */,
 				4FDFCD1D235817850029CFF4 /* HomeScreenController.swift */,
-				4FE0A7B723613AB400DDE58D /* AdditionalInfoController.swift */,
 				4FDFCD1F235817850029CFF4 /* Main.storyboard */,
 				4FDFCD22235817870029CFF4 /* Assets.xcassets */,
 				4FDFCD24235817870029CFF4 /* LaunchScreen.storyboard */,
@@ -211,7 +208,6 @@
 			files = (
 				4FDFCD1E235817850029CFF4 /* HomeScreenController.swift in Sources */,
 				4FDFCD1A235817850029CFF4 /* AppDelegate.swift in Sources */,
-				4FE0A7B823613AB400DDE58D /* AdditionalInfoController.swift in Sources */,
 				4FDFCD1C235817850029CFF4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +353,9 @@
 			baseConfigurationReference = D123671BC713CBED6BED676F /* Pods-Weatherly!.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KLL7ZTK6TX;
 				INFOPLIST_FILE = "Weatherly!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -365,8 +363,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahwalji.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WeatherlyAppStore;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -377,7 +377,9 @@
 			baseConfigurationReference = E4C8612DB11B284B871B4EF7 /* Pods-Weatherly!.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				CODE_SIGN_STYLE = Manual;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = KLL7ZTK6TX;
 				INFOPLIST_FILE = "Weatherly!/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
@@ -385,8 +387,10 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.noahwalji.Weatherly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = WeatherlyAppStore;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
