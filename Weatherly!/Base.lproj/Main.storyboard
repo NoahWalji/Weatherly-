@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Mm8-Cb-6tq">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Home Screen Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="HomeScreenController" customModule="Weatherly_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="gXB-TO-lt4">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="901"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mOa-dB-GRj">
+                                <rect key="frame" x="42" y="726" width="5" height="67"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="thermometer"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VdX-sC-JNK">
+                                <rect key="frame" x="-183" y="703" width="117" height="84"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ellipsis"/>
+                                <connections>
+                                    <segue destination="ebp-ie-mkh" kind="show" id="Kh2-Hw-fgc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0f0-mO-OM0" userLabel="Day 2 low">
+                                <rect key="frame" x="297" y="579" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cYf-Np-auW" userLabel="Day 3 low">
+                                <rect key="frame" x="297" y="529" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dej-yI-4TM" userLabel="Day 4 low">
+                                <rect key="frame" x="297" y="485" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j42-uo-rjp" userLabel="Day 5 low">
+                                <rect key="frame" x="297" y="433" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byj-Jz-eOq" userLabel="Day 6 low">
+                                <rect key="frame" x="330" y="390" width="56" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqE-Ie-HTi">
+                                <rect key="frame" x="242" y="579" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mwE-5y-D5u">
+                                <rect key="frame" x="270" y="340" width="56" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aRx-Lb-W43">
+                                <rect key="frame" x="242" y="529" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C3y-nq-WkY">
+                                <rect key="frame" x="242" y="485" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tuesday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="msN-bP-cWw">
+                                <rect key="frame" x="45" y="356" width="65.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="65.670000000000002" id="5tw-No-cZy"/>
+                                    <constraint firstAttribute="height" constant="16" id="vjK-zu-lbh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wedensday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EQ4-tH-VAL">
+                                <rect key="frame" x="45" y="406" width="92.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="PlP-eM-HeK"/>
+                                    <constraint firstAttribute="width" constant="92.670000000000002" id="yc7-9B-QNC"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thursday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UcB-mT-X10">
+                                <rect key="frame" x="45" y="456" width="74.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="1ON-GN-eSF"/>
+                                    <constraint firstAttribute="width" constant="74.670000000000002" id="MbB-zk-JM4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Friday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="unx-U4-Ywz">
+                                <rect key="frame" x="48" y="506" width="49" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="LHd-BI-JkT"/>
+                                    <constraint firstAttribute="width" constant="49" id="OUl-fU-ct7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sunday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mdm-TC-bvZ">
+                                <rect key="frame" x="45" y="606" width="59" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="0Io-NC-Ieh"/>
+                                    <constraint firstAttribute="width" constant="59" id="NhK-rR-Wkd"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="063-sP-TUD" userLabel="Day 7 low">
+                                <rect key="frame" x="330" y="340" width="56" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vFP-ib-KSL">
+                                <rect key="frame" x="242" y="433" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNJ-P5-wiS">
+                                <rect key="frame" x="270" y="390" width="56" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Saturday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k4H-QI-dPF">
+                                <rect key="frame" x="42" y="556" width="71.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Fzg-uQ-x3j"/>
+                                    <constraint firstAttribute="width" constant="71.670000000000002" id="zWM-2Q-Xi4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Condition" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rWf-MW-Idf">
+                                <rect key="frame" x="174" y="202" width="66" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lUv-mp-X3d">
+                                <rect key="frame" x="153" y="153" width="108" height="21"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TE2-LD-tVe">
+                                <rect key="frame" x="150.5" y="46" width="113" height="70.5"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="70"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8m-9V-RdB" userLabel="high">
+                                <rect key="frame" x="271" y="227" width="54" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oA3-Cb-LKW" userLabel="low">
+                                <rect key="frame" x="325" y="227" width="56" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350980000003" green="0.52310902510000001" blue="0.67534501899999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Quote Of The Day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fTB-et-VnK">
+                                <rect key="frame" x="145.5" y="267" width="123" height="18"/>
+                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monday" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q6B-rC-Z2N">
+                                <rect key="frame" x="45" y="306" width="63.5" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="Awo-Oo-q8J"/>
+                                    <constraint firstAttribute="width" constant="63.5" id="lwN-3d-JuO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87z-R9-EdT">
+                                <rect key="frame" x="242" y="614" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="20°" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfI-yz-GJJ" userLabel="Day 1 low">
+                                <rect key="frame" x="297" y="614" width="112" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="16"/>
+                                <color key="textColor" red="0.36984350981657649" green="0.52310902510742985" blue="0.67534501903553301" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Mdm-TC-bvZ" secondAttribute="bottom" constant="152" id="14f-x7-oLO"/>
+                            <constraint firstItem="Q6B-rC-Z2N" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="1i4-sR-McR"/>
+                            <constraint firstItem="lUv-mp-X3d" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="153" id="5WS-Bk-AZn"/>
+                            <constraint firstItem="unx-U4-Ywz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="48" id="5i3-7q-1kX"/>
+                            <constraint firstItem="k4H-QI-dPF" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="42" id="7Bp-k4-Yoc"/>
+                            <constraint firstItem="UcB-mT-X10" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="8V7-5I-3Jd"/>
+                            <constraint firstItem="UcB-mT-X10" firstAttribute="top" secondItem="EQ4-tH-VAL" secondAttribute="bottom" constant="34" id="8o0-8s-amw"/>
+                            <constraint firstItem="EQ4-tH-VAL" firstAttribute="top" secondItem="msN-bP-cWw" secondAttribute="bottom" constant="34" id="9rR-6t-cW6"/>
+                            <constraint firstItem="EQ4-tH-VAL" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="27" id="BfP-ox-WUN"/>
+                            <constraint firstItem="Q6B-rC-Z2N" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-130.16999999999999" id="EK3-Uz-yEe"/>
+                            <constraint firstItem="Mdm-TC-bvZ" firstAttribute="top" secondItem="k4H-QI-dPF" secondAttribute="bottom" constant="34" id="HAU-Ui-c0I"/>
+                            <constraint firstItem="rWf-MW-Idf" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="202" id="Icj-wN-SgK"/>
+                            <constraint firstItem="unx-U4-Ywz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-134.5" id="JE6-1I-Yiw"/>
+                            <constraint firstItem="unx-U4-Ywz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="127" id="LhE-Ck-kEE"/>
+                            <constraint firstItem="msN-bP-cWw" firstAttribute="top" secondItem="Q6B-rC-Z2N" secondAttribute="bottom" constant="34" id="MiZ-9s-huZ"/>
+                            <constraint firstItem="UcB-mT-X10" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="77" id="MyL-jO-HBD"/>
+                            <constraint firstItem="Mdm-TC-bvZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-132.5" id="PET-1V-Ad0"/>
+                            <constraint firstItem="msN-bP-cWw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="Pwa-fG-dgO"/>
+                            <constraint firstItem="msN-bP-cWw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-129.16999999999999" id="TOs-VG-zYG"/>
+                            <constraint firstItem="k4H-QI-dPF" firstAttribute="top" secondItem="unx-U4-Ywz" secondAttribute="bottom" constant="34" id="VDY-P8-H6L"/>
+                            <constraint firstItem="rWf-MW-Idf" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XCG-iu-Nlb"/>
+                            <constraint firstItem="fTB-et-VnK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="267" id="YEL-1f-f65"/>
+                            <constraint firstItem="unx-U4-Ywz" firstAttribute="top" secondItem="UcB-mT-X10" secondAttribute="bottom" constant="34" id="YUD-t3-oc4"/>
+                            <constraint firstItem="lUv-mp-X3d" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="YY2-iD-kx2"/>
+                            <constraint firstItem="EQ4-tH-VAL" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-115.67" id="aBK-Ut-Tff"/>
+                            <constraint firstItem="TE2-LD-tVe" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="blb-Dg-ruV"/>
+                            <constraint firstItem="k4H-QI-dPF" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="177" id="c2L-dc-Fa9"/>
+                            <constraint firstItem="Mdm-TC-bvZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="cbU-SM-wwB"/>
+                            <constraint firstItem="unx-U4-Ywz" firstAttribute="top" secondItem="UcB-mT-X10" secondAttribute="bottom" constant="34" id="g62-Ra-pfD"/>
+                            <constraint firstItem="k4H-QI-dPF" firstAttribute="top" secondItem="unx-U4-Ywz" secondAttribute="bottom" constant="34" id="hw8-3p-dMJ"/>
+                            <constraint firstItem="Mdm-TC-bvZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="227" id="k28-k5-0Yz"/>
+                            <constraint firstItem="UcB-mT-X10" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-124.67" id="k5g-yP-sgf"/>
+                            <constraint firstItem="Q6B-rC-Z2N" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-73" id="t2B-gh-GOq"/>
+                            <constraint firstItem="Mdm-TC-bvZ" firstAttribute="top" secondItem="k4H-QI-dPF" secondAttribute="bottom" constant="34" id="tU7-D9-V4i"/>
+                            <constraint firstItem="EQ4-tH-VAL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="45" id="uDu-cD-Coo"/>
+                            <constraint firstItem="k4H-QI-dPF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-129.16999999999999" id="v21-kW-wW3"/>
+                            <constraint firstItem="msN-bP-cWw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-23" id="vA3-OT-0CJ"/>
+                            <constraint firstItem="fTB-et-VnK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vsR-Su-1Im"/>
+                            <constraint firstItem="TE2-LD-tVe" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" constant="46" id="x72-mN-N6s"/>
+                            <constraint firstItem="UcB-mT-X10" firstAttribute="top" secondItem="EQ4-tH-VAL" secondAttribute="bottom" constant="34" id="z9w-z4-y3l"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lch-09-3s6"/>
+                    <connections>
+                        <outlet property="cityLabel" destination="lUv-mp-X3d" id="dkp-1w-W3a"/>
+                        <outlet property="conditionLabel" destination="rWf-MW-Idf" id="CTi-7d-VLL"/>
+                        <outlet property="currentHighLabel" destination="J8m-9V-RdB" id="XoG-pt-k2a"/>
+                        <outlet property="currentLowLabel" destination="oA3-Cb-LKW" id="buJ-6R-3wN"/>
+                        <outlet property="day1" destination="Q6B-rC-Z2N" id="8jg-0V-pYM"/>
+                        <outlet property="day1low" destination="gfI-yz-GJJ" id="ebX-tI-yBC"/>
+                        <outlet property="day1temp" destination="87z-R9-EdT" id="jYf-pm-ly6"/>
+                        <outlet property="day2" destination="msN-bP-cWw" id="T0h-4J-8qV"/>
+                        <outlet property="day2low" destination="0f0-mO-OM0" id="XLl-su-HmB"/>
+                        <outlet property="day2temp" destination="vFP-ib-KSL" id="UZb-Xj-4iX"/>
+                        <outlet property="day3" destination="EQ4-tH-VAL" id="zOc-mZ-p6K"/>
+                        <outlet property="day3low" destination="cYf-Np-auW" id="yZE-1c-m84"/>
+                        <outlet property="day3temp" destination="mwE-5y-D5u" id="Ujm-LY-tKT"/>
+                        <outlet property="day4" destination="UcB-mT-X10" id="dTO-R3-8vV"/>
+                        <outlet property="day4low" destination="dej-yI-4TM" id="776-XU-Htg"/>
+                        <outlet property="day4temp" destination="gNJ-P5-wiS" id="DX4-AJ-6rS"/>
+                        <outlet property="day5" destination="unx-U4-Ywz" id="hhn-pf-xg5"/>
+                        <outlet property="day5low" destination="j42-uo-rjp" id="2t5-f4-Py7"/>
+                        <outlet property="day5temp" destination="aRx-Lb-W43" id="1Qr-hq-cMG"/>
+                        <outlet property="day6" destination="k4H-QI-dPF" id="mSk-iv-yhz"/>
+                        <outlet property="day6low" destination="Byj-Jz-eOq" id="BZK-rP-1Jz"/>
+                        <outlet property="day6temp" destination="rqE-Ie-HTi" id="JWs-SO-yTf"/>
+                        <outlet property="day7" destination="Mdm-TC-bvZ" id="Mnd-Qf-U8l"/>
+                        <outlet property="day7low" destination="063-sP-TUD" id="Hfa-Ty-zwP"/>
+                        <outlet property="day7temp" destination="C3y-nq-WkY" id="grg-eP-GOe"/>
+                        <outlet property="quoteLabel" destination="fTB-et-VnK" id="cpM-VC-e5o"/>
+                        <outlet property="tempLabel" destination="TE2-LD-tVe" id="UdJ-PY-WJU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="940.57971014492762" y="135.26785714285714"/>
+        </scene>
+        <!--Additional Info Controller-->
+        <scene sceneID="Okn-X3-8od">
+            <objects>
+                <viewController id="ebp-ie-mkh" customClass="AdditionalInfoController" customModule="Weatherly_" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Ubq-fi-sij">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="OPi-cx-xb5">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="901"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunrise" translatesAutoresizingMaskIntoConstraints="NO" id="rHT-rl-hPa">
+                                <rect key="frame" x="64" y="158" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wind" translatesAutoresizingMaskIntoConstraints="NO" id="mLr-KS-On3">
+                                <rect key="frame" x="158" y="388" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="sunset" translatesAutoresizingMaskIntoConstraints="NO" id="RIM-l5-S91">
+                                <rect key="frame" x="257" y="158" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00 AM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ap2-BM-i63">
+                                <rect key="frame" x="57" y="266" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 km/hr" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wtJ-27-YbW">
+                                <rect key="frame" x="151" y="484" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Visability:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LvQ-Yk-7oM">
+                                <rect key="frame" x="49" y="584" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pressure:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZwJ-JS-j6H">
+                                <rect key="frame" x="242" y="584" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W6" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 km" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9xY-bO-GNr">
+                                <rect key="frame" x="49" y="630" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0 hPA" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uYg-Mq-3MM">
+                                <rect key="frame" x="242" y="630" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="20"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0:00 PM" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvE-4T-ddM">
+                                <rect key="frame" x="250" y="266" width="115" height="66"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HiraginoSans-W3" family="Hiragino Sans" pointSize="21"/>
+                                <color key="textColor" red="0.20392156859999999" green="0.28627450980000002" blue="0.36862745099999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZn-UT-iNf">
+                                <rect key="frame" x="38" y="832" width="44" height="44"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="thermometer"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="LVs-KS-Aio"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jEu-0e-XoL">
+                                <rect key="frame" x="318" y="832" width="47" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ellipsis"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="h6E-3J-wlP"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="XhB-YR-X3Z"/>
+                    <connections>
+                        <outlet property="pressureLabel" destination="uYg-Mq-3MM" id="kPX-Sn-KdN"/>
+                        <outlet property="sunriseLabel" destination="Ap2-BM-i63" id="xGs-Ki-HpJ"/>
+                        <outlet property="sunsetLabel" destination="dvE-4T-ddM" id="hjS-tM-xb0"/>
+                        <outlet property="visabilityLabel" destination="9xY-bO-GNr" id="aHp-nb-VbJ"/>
+                        <outlet property="windSpeedLabel" destination="wtJ-27-YbW" id="RwQ-WC-IWW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5U-EY-7yr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1808.6956521739132" y="138.61607142857142"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Mh8-X3-4A8">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Mm8-Cb-6tq" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics" barStyle="black"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rb1-C5-cmW">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="WRl-Sc-Zus"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="65A-GI-FqK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="37.681159420289859" y="138.61607142857142"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="640" height="1136"/>
+        <image name="ellipsis" width="512" height="512"/>
+        <image name="sunrise" width="128" height="128"/>
+        <image name="sunset" width="128" height="128"/>
+        <image name="thermometer" width="512" height="512"/>
+        <image name="wind" width="180" height="180"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Kh2-Hw-fgc"/>
+        <segue reference="LVs-KS-Aio"/>
+    </inferredMetricsTieBreakers>
+</document>
